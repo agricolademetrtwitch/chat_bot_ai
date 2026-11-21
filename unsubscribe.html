@@ -1,0 +1,223 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-11-21T02:10:59.410Z"/>
+    
+    <meta name="google" content="notranslate">
+    <link rel="icon" type="image/svg+xml" href="https://chat-box.ai/app/favicon.svg">
+
+    <!-- Google Tag Manager - must load from the served HTML so the container is
+         present on first paint. The container ID is substituted by Vite at build
+         time from VITE_GTM_ID; the guard below skips loading when that
+         substitution did not happen (no GTM ID configured for the build). -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+    <script>
+      ;(function () {
+        var gtmId = 'GTM-K8B9J5FT'
+
+        if (!gtmId || gtmId.indexOf('%VITE_') === 0) return
+
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' })
+
+        var script = document.createElement('script')
+        script.async = true
+        script.id = 'gtm-loader'
+        script.fetchPriority = 'low'
+        script.src =
+          'https://www.googletagmanager.com/gtm.js?id=' +
+          encodeURIComponent(gtmId)
+        document.head.appendChild(script)
+      })()
+    </script>
+
+    <!-- Preload critical font for faster text rendering (LCP optimization) -->
+    <link rel="preload" href="app/fonts/InterVariable.woff2" as="font" type="font/woff2" fetchpriority="high">
+
+    <!-- Load self-hosted Inter font CSS with font-display swap for faster LCP -->
+    <style>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url('/app/fonts/InterVariable.woff2') format('woff2');
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+          U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <noscript><link rel="stylesheet" href="app/fonts/inter.css"></noscript>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+
+    <meta name="theme-color" content="#fafafa">
+    <script>
+      ;(function () {
+        var storageKey = 'themePreference'
+
+        function readPreference() {
+          try {
+            var rawPreference = window.localStorage.getItem(storageKey)
+            if (!rawPreference) return null
+
+            // Honor legacy raw-string values before JSON.parse, which would
+            // throw on an unquoted 'light'/'dark' and skip this fallback.
+            if (rawPreference === 'light' || rawPreference === 'dark') {
+              return rawPreference
+            }
+
+            var parsedPreference = JSON.parse(rawPreference)
+            if (parsedPreference === 'light' || parsedPreference === 'dark') {
+              return parsedPreference
+            }
+          } catch (error) {
+            return null
+          }
+
+          return null
+        }
+
+        var preference = readPreference()
+        var systemTheme =
+          window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+        var theme = preference || systemTheme
+        var root = document.documentElement
+
+        root.classList.toggle('dark', theme === 'dark')
+        root.style.colorScheme = theme
+        root.dataset.theme = theme
+        root.dataset.themePreference = preference || 'system'
+      })()
+    </script>
+
+    <!-- SEO metadata -->
+    <title>Chatbox AI</title>
+    <meta name="description" content="Chatbox AI is a web platform that lets you chat, search, and generate content using multiple AI models in one place.">
+    <meta name="keywords" content="ai productivity, online ai tools, unified ai platform, ai workspace, all in one ai, smart assistant">
+    <meta property="og:title" content="Chatbox AI">
+    <meta property="og:description" content="Chatbox AI lets you chat, search, and generate content using multiple AI models in one simple interface.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chatbox AI">
+    <meta property="og:image" content="/app/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Chatbox AI - Advanced AI Chat Platform">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chatbox AI">
+    <meta name="twitter:description" content="Chatbox AI lets you chat, search, and generate content using multiple AI models in one simple interface.">
+    <meta name="twitter:image" content="/app/og-image.png">
+    <meta name="twitter:image:alt" content="Chatbox AI - Advanced AI Chat Platform">
+    <link rel="canonical" href="app.html">
+    <link rel="alternate" href="https://chat-box.ai/app/en" hreflang="x-default">
+    <link rel="alternate" href="https://chat-box.ai/app/en" hreflang="en">
+    <link rel="alternate" href="https://chat-box.ai/app/ar" hreflang="ar">
+    <link rel="alternate" href="https://chat-box.ai/app/bg" hreflang="bg">
+    <link rel="alternate" href="https://chat-box.ai/app/cs" hreflang="cs">
+    <link rel="alternate" href="https://chat-box.ai/app/da" hreflang="da">
+    <link rel="alternate" href="https://chat-box.ai/app/de" hreflang="de">
+    <link rel="alternate" href="https://chat-box.ai/app/el" hreflang="el">
+    <link rel="alternate" href="https://chat-box.ai/app/es" hreflang="es">
+    <link rel="alternate" href="https://chat-box.ai/app/fi" hreflang="fi">
+    <link rel="alternate" href="https://chat-box.ai/app/fr" hreflang="fr">
+    <link rel="alternate" href="https://chat-box.ai/app/he" hreflang="he">
+    <link rel="alternate" href="https://chat-box.ai/app/hi" hreflang="hi">
+    <link rel="alternate" href="https://chat-box.ai/app/hr" hreflang="hr">
+    <link rel="alternate" href="https://chat-box.ai/app/hu" hreflang="hu">
+    <link rel="alternate" href="https://chat-box.ai/app/id" hreflang="id">
+    <link rel="alternate" href="https://chat-box.ai/app/it" hreflang="it">
+    <link rel="alternate" href="https://chat-box.ai/app/ja" hreflang="ja">
+    <link rel="alternate" href="https://chat-box.ai/app/ko" hreflang="ko">
+    <link rel="alternate" href="https://chat-box.ai/app/ms" hreflang="ms">
+    <link rel="alternate" href="https://chat-box.ai/app/nl" hreflang="nl">
+    <link rel="alternate" href="https://chat-box.ai/app/no" hreflang="no">
+    <link rel="alternate" href="https://chat-box.ai/app/pl" hreflang="pl">
+    <link rel="alternate" href="https://chat-box.ai/app/pt-br" hreflang="pt-BR">
+    <link rel="alternate" href="https://chat-box.ai/app/pt" hreflang="pt">
+    <link rel="alternate" href="https://chat-box.ai/app/ro" hreflang="ro">
+    <link rel="alternate" href="https://chat-box.ai/app/ru" hreflang="ru">
+    <link rel="alternate" href="https://chat-box.ai/app/sk" hreflang="sk">
+    <link rel="alternate" href="https://chat-box.ai/app/sl" hreflang="sl">
+    <link rel="alternate" href="https://chat-box.ai/app/sr" hreflang="sr">
+    <link rel="alternate" href="https://chat-box.ai/app/sv" hreflang="sv">
+    <link rel="alternate" href="https://chat-box.ai/app/th" hreflang="th">
+    <link rel="alternate" href="https://chat-box.ai/app/uk" hreflang="uk">
+    <link rel="alternate" href="https://chat-box.ai/app/zh" hreflang="zh-CN">
+    <link rel="alternate" href="https://chat-box.ai/app/zh-yue" hreflang="zh-HK">
+
+    <!-- Critical inline CSS for faster initial render and LCP optimization -->
+    <style>
+      #root {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+      }
+      body {
+        margin: 0;
+        font-family:
+          'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          'Roboto',
+          'Oxygen',
+          'Ubuntu',
+          'Cantarell',
+          'Fira Sans',
+          'Droid Sans',
+          'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #ffffff;
+      }
+    </style>
+    <script>
+      // Connect only to the API origin used by this build/deployment. Third-party
+      // origins are connected by their on-demand loaders after the first render.
+      ;(function () {
+        var apiBaseUrl = 'https://chat-box.ai/app/api/v1'
+
+        if (!apiBaseUrl || apiBaseUrl.startsWith('%VITE_')) return
+
+        try {
+          var link = document.createElement('link')
+          link.rel = 'preconnect'
+          link.href = new URL(apiBaseUrl, window.location.origin).origin
+          link.crossOrigin = 'anonymous'
+          document.head.appendChild(link)
+        } catch {
+          // Invalid runtime configuration is reported by the application bootstrap.
+        }
+      })()
+    </script>
+    <script type="module" src="app/assets/index-49KMl1cq.js"></script>
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/rolldown-runtime-DGUZBcDz.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/react-BFSvvoIa.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/config-DRExUNUu.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/jsx-runtime-CWAMhVvw.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/bundle-mjs--QZJG0if.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/removable-DdxanBOY.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/query-CQm8cYUD.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/infiniteQueryBehavior-BA8sfLnc.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/mutation-DQDfDUDz.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/queryClient-BIhWyK7D.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/preload-helper-B-WWcUk0.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/logger-BiDZJFJa.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/stores-CGp1EgpX.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/maintenanceStore-2VPIuo3e.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/baseUrl-DBWUmDEi.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/sessionStorage.service-ClfEYS1F.js">
+    <link rel="modulepreload" crossorigin="" href="https://chat-box.ai/app/assets/token-CxssmOfa.js">
+    <link rel="stylesheet" href="app/assets/index-kvP3k6Hb.css">
+  </head>
+
+  <body>
+    <div id="safari-topbar-tint" aria-hidden="true"></div>
+    <div id="safari-toolbar-tint" aria-hidden="true"></div>
+    <div id="root"></div>
+  
+
+</body>
